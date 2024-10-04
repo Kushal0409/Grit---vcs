@@ -1,9 +1,10 @@
 {
   "name": "grit",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A VCS tool inspired by Git with an Electron-based GUI",
+  "main": "main.js",  
   "scripts": {
+    "start": "electron .",  
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,5 +14,8 @@
     "chalk": "^5.3.0",
     "commander": "^12.1.0",
     "diff": "^7.0.0"
+  },
+  "devDependencies": {
+    "electron": "^32.1.2"
   }
 }

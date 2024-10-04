@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grit Version Control System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        button, input[type="text"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        input[type="text"], input[type="file"] {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+        }
+        #output {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Grit Version Control System</h1>
+
+        <div class="section">
+            <h2>Initialize Repository</h2>
+            <button id="init-btn">Initialize Repo</button>
+        </div>
+
+        <div class="section">
+            <h2>Add File</h2>
+            <input type="file" id="file-input" />
+            <button id="add-btn">Add File</button>
+        </div>
+
+        <div class="section">
+            <h2>Commit Changes</h2>
+            <input type="text" id="commit-msg" placeholder="Enter commit message">
+            <button id="commit-btn">Commit Changes</button>
+        </div>
+
+        <div class="section">
+            <h2>View Log</h2>
+            <button id="log-btn">View Log</button>
+        </div>
+
+        <div class="section">
+            <h2>Show Diff</h2>
+            <input type="text" id="commit-hash" placeholder="Enter commit hash">
+            <button id="show-btn">Show Commit Diff</button>
+        </div>
+
+        <div class="section">
+            <h2>Undo Last Operation</h2>
+            <button id="undo-btn">Undo Last Operation</button>
+        </div>
+
+        <div class="section">
+            <h2>Branching and Merging</h2>
+            <input type="text" id="branch-name" placeholder="Branch name">
+            <button id="create-branch-btn">Create Branch</button>
+            <button id="switch-branch-btn">Switch to Branch</button>
+        </div>
+
+        <div class="section">
+            <h2>Merge Branch</h2>
+            <input type="text" id="merge-branch-name" placeholder="Branch to merge">
+            <button id="merge-branch-btn">Merge Branch</button>
+        </div>
+
+        <div class="section">
+            <h2>Output Display</h2>
+            <pre id="output"></pre>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
